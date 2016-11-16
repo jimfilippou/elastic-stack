@@ -1,7 +1,7 @@
     server {
         listen 80;
 
-        server_name [IP HERE];
+        server_name [IP OF LOG-SERVER HERE];
 
         auth_basic "Restricted Access";
         auth_basic_user_file /etc/nginx/htpasswd.users;
