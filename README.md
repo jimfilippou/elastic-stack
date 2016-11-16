@@ -1,21 +1,19 @@
 # Elastic-Stack-5.0
-This is a documentation / walkthrough on how to install Elastic Stack on Ubuntu 16.04 Server
+This is a documentation / walkthrough on how to install Elastic Stack on Ubuntu 16.04 Server.
+
+By the end of this guide you will have up and running ELK Server in no time!
 
 ##Elastic Stack 5.0 Installation Guide 
   
 * Platform : Ubuntu            
 * Version  : 16.04        
 * Author   : D.Filippou        
-
-
-   Start
-   -----
-   +  sudo -s    
+   
 
    Java Setup
    ----------
-   +  apt-get update
-   +  apt-get install openjdk-8-jre
+   +  sudo apt-get update
+   +  sudo apt-get install openjdk-8-jre
    
    NginX Setup
    ----------- 
@@ -26,6 +24,10 @@ This is a documentation / walkthrough on how to install Elastic Stack on Ubuntu 
    +  sudo nginx -t
    +  sudo systemctl restart nginx
    +  sudo ufw allow 'Nginx Full' 
+
+   Enable Root
+   -----------
+   +  sudo -s
 
    Elastic Search Setup
    --------------------
@@ -55,7 +57,7 @@ This is a documentation / walkthrough on how to install Elastic Stack on Ubuntu 
    +  curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.0.0-amd64.deb
    +  dpkg -i filebeat-5.0.0-amd64.deb 
    +  nano /etc/filebeat/filebeat.yml
-   +  sudo /etc/init.d/filebeat start
+   +  /etc/init.d/filebeat start
    +  ./usr/share/filebeat/scripts/import_dashboards 
   
    Metricbeat Setup (Each Server) [Optional]
@@ -63,6 +65,6 @@ This is a documentation / walkthrough on how to install Elastic Stack on Ubuntu 
    +  wget https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-5.0.0-amd64.deb
    +  dpkg -i metricbeat-5.0.0-amd64.deb 
    +  nano /etc/metricbeat/metricbeat.yml
-   +  sudo /etc/init.d/metricbeat start
+   +  /etc/init.d/metricbeat start
    +  ./usr/share/metricbeat/scripts/import_dashboards 
   
