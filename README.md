@@ -17,6 +17,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
 | Logstash      | 5.0.0         |
 | Kibana        | 5.0.0         |
 | Beats         | 5.0.0         |
+| X-Pack        | 5.0.0         |
 | Nginx         | 1.10.0        |
 | Java          | 1.8.0_111     |
   
@@ -66,6 +67,15 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  cd ~ && curl -L -O https://artifacts.elastic.co/downloads/kibana/kibana-5.0.0-linux-x86_64.tar.gz
    +  tar -xvf kibana-5.0.0-linux-x86_64.tar.gz kibana-5.0.0-linux-x86_64/
    +  ./kibana-5.0.0-linux-x86_64/bin/kibana
+   
+   X-Pack Setup
+   ------------
+   + /etc/init.d/elasticsearch stop
+   + cd /usr/share/elasticsearch/bin
+   + ./elasticsearch-plugin install x-pack
+   + /etc/init.d/elasticsearch start
+   + cd /home/YOUR NAME/kibana-5.0.0-linux-x86_64/bin
+   + ./kibana-plugin install x-pack
 
    Filebeat Setup (Each Server) [Optional]
    ---------------------------------------
