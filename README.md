@@ -8,7 +8,6 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
 * Platform : Ubuntu            
 * Version  : 16.04        
 * Author   : D.Filippou        
-   
 
    Java Setup
    ----------
@@ -50,7 +49,6 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  cd ~ && curl -L -O https://artifacts.elastic.co/downloads/kibana/kibana-5.0.0-linux-x86_64.tar.gz
    +  tar -xvf kibana-5.0.0-linux-x86_64.tar.gz kibana-5.0.0-linux-x86_64/
    +  ./kibana-5.0.0-linux-x86_64/bin/kibana
-
 
    Filebeat Setup (Each Server) [Optional]
    ---------------------------------------
