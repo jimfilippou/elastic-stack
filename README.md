@@ -4,10 +4,21 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
 
 
 ##Elastic Stack 5.0 Installation Guide 
+
+| Software      | Version       |
+| ------------- | ------------- |
+| Elasticsearch | 5.0.0         |
+| Logstash      | 5.0.0         |
+| Kibana        | 5.0.0         |
+| Beats         | 5.0.0         |
+| Nginx         | 1.10.0        |
+| Java          | 1.8.0_111     |
   
-* Platform : Ubuntu            
-* Version  : 16.04        
-* Author   : D.Filippou        
+| Platform      | Version       | Architecture |
+| --------------| ------------- | ------------ |
+| Ubuntu        | 16.04         | x86_64       |
+
+* Author       : D.Filippou        
 
    Java Setup
    ----------
