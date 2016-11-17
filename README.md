@@ -5,6 +5,12 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
 
 ##Elastic Stack 5.0 Installation Guide 
 
+####Minimum System Requirements
+    OS: Ubuntu 14.04
+    RAM: 4GB
+    CPU: 2
+
+
 | Software      | Version       |
 | ------------- | ------------- |
 | Elasticsearch | 5.0.0         |
