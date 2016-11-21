@@ -76,6 +76,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    + /etc/init.d/elasticsearch start
    + cd /home/YOUR NAME/kibana-5.0.0-linux-x86_64/bin
    + ./kibana-plugin install x-pack
+   + [To Import License Refer To X-Pack/license_import.sh]
 
    Filebeat Setup (Each Server) [Optional]
    ---------------------------------------
