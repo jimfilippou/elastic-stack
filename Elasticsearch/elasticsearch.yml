@@ -1,0 +1,7 @@
+# * This is NOT a default Configuration *
+
+# Add this line to your yml Configuration to exclude X-Pack Login Security
+xpack.security.enabled: false
+
+# Add this line to your yml Configuration to include X-Pack Login Security
+xpack.security.enabled: true
