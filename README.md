@@ -66,8 +66,8 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    ------------
    +  cd ~ && curl -L -O https://artifacts.elastic.co/downloads/kibana/kibana-5.0.0-linux-x86_64.tar.gz
    +  tar -xvf kibana-5.0.0-linux-x86_64.tar.gz kibana-5.0.0-linux-x86_64/
-   +  ./kibana-5.0.0-linux-x86_64/bin/kibana       (Debug Mode)
-   +  nohup ./kibana-5.0.0-linux-x86_64/bin/kibana (Production Mode)
+   +  ./kibana-5.0.0-linux-x86_64/bin/kibana         (Debug Mode)
+   +  nohup ./kibana-5.0.0-linux-x86_64/bin/kibana & (Production Mode)
    
    X-Pack Setup
    ------------
