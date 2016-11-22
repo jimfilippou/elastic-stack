@@ -62,7 +62,6 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  cd /usr/share/logstash/bin
    +  ./logstash-plugin update logstash-input-beats
    +  systemctl start logstash
-   -  sudo update-rc.d logstash defaults 96 9 [Optional]
 
    Kibana Setup
    ------------
@@ -96,5 +95,5 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  dpkg -i metricbeat-5.0.0-amd64.deb 
    +  nano /etc/metricbeat/metricbeat.yml
    +  /etc/init.d/metricbeat start
-   +  ./usr/share/metricbeat/scripts/import_dashboards 
+   +  /usr/share/metricbeat/scripts/import_dashboards 
   
