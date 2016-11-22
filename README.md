@@ -36,7 +36,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    ----------- 
    +  sudo apt-get install nginx
    +  sudo -v
-   +  echo "kibanaadmin:`openssl passwd -apr1`" | sudo tee -a /etc/nginx/htpasswd.users
+   +  Get this command from http://pastebin.com/pTwwUpUQ (Markup Issues)
    +  sudo nano /etc/nginx/sites-available/default
    +  sudo nginx -t
    +  sudo systemctl restart nginx
