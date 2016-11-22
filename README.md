@@ -28,7 +28,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    ----------
    +  sudo apt-get update
    +  sudo apt-get install openjdk-8-jre
-   
+
    NginX Setup
    ----------- 
    +  sudo apt-get install nginx
