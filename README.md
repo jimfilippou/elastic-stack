@@ -21,9 +21,9 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
 | Nginx         | 1.10.0        |
 | Java          | 1.8.0_111     |
  
-#   By the end of these steps you will:
-   -----------------------------------
-   + test
+#   Follow The Steps To Get A Full ELK Installation
+   ------------------------------------------------
+   + Lets Begin
 
    Java Setup
    ----------
