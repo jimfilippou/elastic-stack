@@ -36,7 +36,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    ----------- 
    +  sudo apt-get install nginx
    +  sudo -v
-   +  Get this command from http://pastebin.com/pTwwUpUQ (Markup Issues)
+   +  Get this command from http://pastebin.com/pTwwUpUQ (Markup Issue)
    +  sudo nano /etc/nginx/sites-available/default
    +  sudo nginx -t
    +  sudo systemctl restart nginx
@@ -66,7 +66,8 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    ------------
    +  cd ~ && curl -L -O https://artifacts.elastic.co/downloads/kibana/kibana-5.0.0-linux-x86_64.tar.gz
    +  tar -xvf kibana-5.0.0-linux-x86_64.tar.gz kibana-5.0.0-linux-x86_64/
-   +  ./kibana-5.0.0-linux-x86_64/bin/kibana
+   +  ./kibana-5.0.0-linux-x86_64/bin/kibana       (Debug Mode)
+   +  nohup ./kibana-5.0.0-linux-x86_64/bin/kibana (Production Mode)
    
    X-Pack Setup
    ------------
