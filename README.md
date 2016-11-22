@@ -85,7 +85,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  dpkg -i filebeat-5.0.0-amd64.deb 
    +  nano /etc/filebeat/filebeat.yml
    +  /etc/init.d/filebeat start
-   +  ./usr/share/filebeat/scripts/import_dashboards 
+   +  /usr/share/filebeat/scripts/import_dashboards 
   
    Metricbeat Setup (Each Server) [Optional]
    -----------------------------------------
