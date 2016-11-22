@@ -1,9 +1,9 @@
 # Elastic-Stack-5.0
 This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 16.04 Server.
 
-
-
 ##Elastic Stack 5.0 Installation Guide 
+
+###Author  Dimitris Filippou
 
 ####Minimum System Requirements
     OS: Ubuntu 16.04
@@ -20,12 +20,9 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
 | X-Pack        | 5.0.0         |
 | Nginx         | 1.10.0        |
 | Java          | 1.8.0_111     |
-  
-| Platform      | Version       | Architecture |
-| --------------| ------------- | ------------ |
-| Ubuntu        | 16.04         | x86_64       |
 
-* Author       : D.Filippou        
+
+*      
 
    Java Setup
    ----------
