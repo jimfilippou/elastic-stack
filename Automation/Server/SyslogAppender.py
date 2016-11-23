@@ -9,5 +9,5 @@ while True:
         print("Exited")
         break
     else:
-        os.system("echo '" + str(x) + "'' >> " + path + file)
+        os.system("echo '" + str(x) + "' >> " + path + file)
     
