@@ -21,7 +21,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
 | Nginx         | 1.10.0        |
 | Java          | 1.8.0_111     |
  
-##   Follow The Steps To Get A Full ELK Installation
+##   Follow These Steps To Get A Full ELK Installation
  
    + Lets Begin
 
@@ -50,7 +50,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  dpkg -i elasticsearch-5.0.0.deb 
    +  /etc/init.d/elasticsearch start
    +  curl http://127.0.0.1:9200 (Testing Purposes)
-   +  sudo update-rc.d elasticsearch defaults 95 10 [Optional]
+   +  sudo systemctl enable elasticsearch [Optional]
 
    Logstash Setup
    --------------
@@ -59,6 +59,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  nano /etc/logstash/conf.d/logstash.conf
    +  cd /usr/share/logstash/bin
    +  ./logstash-plugin update logstash-input-beats
+   +  systemctl enable logstash
    +  systemctl start logstash
 
    Kibana Setup
@@ -85,7 +86,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  nano /etc/filebeat/filebeat.yml
    +  /etc/init.d/filebeat start
    +  /usr/share/filebeat/scripts/import_dashboards 
-   +  sudo update-rc.d filebeat defaults 95 10 [Optional]
+   +  systemctl enable filebeat [Optional]
   
    Metricbeat Setup (Each Server) [Optional]
    -----------------------------------------
@@ -94,4 +95,4 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  nano /etc/metricbeat/metricbeat.yml
    +  /etc/init.d/metricbeat start
    +  /usr/share/metricbeat/scripts/import_dashboards 
-  
+   +  systemctl enable metricbeat [optional]
