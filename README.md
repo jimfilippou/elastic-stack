@@ -50,7 +50,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
    +  dpkg -i elasticsearch-5.0.0.deb 
    +  /etc/init.d/elasticsearch start
    +  curl http://127.0.0.1:9200 (Testing Purposes)
-   +  sudo systemctl enable elasticsearch [Optional]
+   +  systemctl enable elasticsearch [Optional]
 
    Logstash Setup
    --------------
