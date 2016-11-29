@@ -7,7 +7,7 @@ This is a Documentation / Walkthrough on how to install Elastic Stack on Ubuntu 
 
 ####Minimum System Requirements
     OS: Ubuntu 16.04
-    RAM: 4GB
+    RAM: 5GB
     CPU: 2
 
 
