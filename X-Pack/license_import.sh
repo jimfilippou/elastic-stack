@@ -1,3 +1,4 @@
+# With this you can import the license to XPACK
 
 if [ ! -f license.json ]; then
     echo "License not found!"

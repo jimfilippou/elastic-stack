@@ -1,5 +1,5 @@
 
-# Make sure you delete output to elasticsearch 
+# Make sure you delete output to elasticsearch, we want to output on logstash 
 # Then uncomment this section and add the hosts line
 
 output.logstash:

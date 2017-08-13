@@ -1,3 +1,11 @@
+"""
+
+Maybe the worst script to append to syslog but you get the idea :P
+
+I think using the rsyslog CLI will do the job better than this sh!t
+
+"""
+
 import os
 
 path = "/var/log/"
