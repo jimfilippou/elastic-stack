@@ -3,6 +3,10 @@ A brief Documentation on how to install Elastic Stack on Ubuntu 16.04 Server.
 
 ## Elastic Stack 5.0 Installation Guide 
 
+
+![alt text](https://3.bp.blogspot.com/-3gz5Ot9YHmE/WGf8k9D6mzI/AAAAAAAAAMk/rO2hxFdTQhouAdowiU3om8ulGcRHzjqdwCLcB/s640/elastic-stack-5-0-diagram-thumb.jpg "Elastic Stack")
+
+
 ### Author  Dimitris Filippou
 
 
