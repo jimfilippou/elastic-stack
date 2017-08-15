@@ -1,6 +1,0 @@
-
-# Make sure you delete output to elasticsearch, we want to output on logstash 
-# Then uncomment this section and add the hosts line
-
-output.logstash:
-  hosts: ["127.0.0.1:5044"]

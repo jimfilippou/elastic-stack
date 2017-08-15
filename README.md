@@ -1,5 +1,5 @@
 # Elastic-Stack-5.0
-A brief Documentation on how to install Elastic Stack on Ubuntu 16.04 Server.
+A complete documentation on how to install Elastic Stack on Ubuntu 16.04 Server ASAP ( As Simple As Possible )
 
 ## Elastic Stack 5.0 Installation Guide 
 
@@ -166,6 +166,99 @@ Use the default nginx configuration i provided
 +  sudo ufw allow 'Nginx Full' 
 
 
+## Setting up Filebeat
+
+Filebeat does not require java, plus it's lightweight so don't worry about anything related to performance.
+
+Like the old days add the apt repositories
+
+`wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -`
+
+`echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list`
+
+Now install it
+
+`apt-get update && apt-get install filebeat`
+
+Time to configure
+
+`nano /etc/filebeat/filebeat.yml`
+
+Use this configuration to start
+
+```
+paths:
+  - /var/log/syslog
+document_type: syslog
+```
+
+Then comment out output.elasticsearch line and the hosts line below it. We will be forwarding to logstash so uncomment output.logstash line and hosts line below it and replace with logstash ip
+
+Now move to logstash server and open a console
+
+Let's connfigure beats to filter the incoming data.
+
+`nano /etc/logstash/conf.d/beats.conf`
+
+There is no filter section to the current configuration so add this block!
+
+
+```
+filter {
+
+  if [type] == "syslog" {
+    grok {
+      match => { "message" => "%{SYSLOGTIMESTAMP:syslog:timestamp"} %{SYSLOGHOST:syslog_hostname} %{DATA:syslog_program}(?:\[%{POSINT:syslog_pid}\])?: %{GREEDYDATA:syslog_message}" }
+    }
+    date {
+      match => [ "syslog_timestamp", "MMM  d HH:mm:ss", "MMM dd HH:mm:ss" ]
+    }
+  }
+
+}
+```
+
+Restart logstash
+
+`service logstas stop` 
+
+`service logstas stop` 
+
+Move back to filebeat server. Lets load the templates!
+
+`cd /etc/filebeat`
+
+`curl -XPUT 'http://elasticsearchserver:9200/_template/filebeat' -d@/etc/filebeat/filebeat.template.json`
+
+Make it run on boot
+
+`systemctl enable filebeat`
+
+Start
+
+`service filebeat start`
+
+Now open your browser and navigate to kibana front-end
+
+Go to management
+
+![alt text](http://i.imgur.com/gMkov24.png "Elastic Stack")
+
+Go to Index Patterns
+
+![alt text](http://i.imgur.com/XRPsJAx.png "Elastic Stack")
+
+Add a new index
+
+![alt text](http://i.imgur.com/RPM4CIC.png "Elastic Stack")
+
+Make sure Index name or pattern is **filebeat-***
+
+![alt text](http://i.imgur.com/RS4UDq2.png "Elastic Stack")
+
+Go ahead, visualize your data 💩 !
+
+
 ## X-Pack Setup
 
 + /etc/init.d/elasticsearch stop
@@ -175,15 +268,6 @@ Use the default nginx configuration i provided
 + cd /home/YOUR NAME/kibana-5.0.0-linux-x86_64/bin
 + ./kibana-plugin install x-pack
 + [To Import License Refer To X-Pack/license_import.sh]
-
-## Filebeat Setup (Each Server) [Optional]
-
-+  curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-5.0.0-amd64.deb
-+  dpkg -i filebeat-5.0.0-amd64.deb 
-+  nano /etc/filebeat/filebeat.yml
-+  /etc/init.d/filebeat start
-+  /usr/share/filebeat/scripts/import_dashboards 
-+  systemctl enable filebeat [Optional]
 
 ## Metricbeat Setup (Each Server) [Optional]
 
