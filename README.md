@@ -12,9 +12,6 @@ A complete documentation on how to install Elastic Stack on Ubuntu 16.04 Server 
 [![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/bitbucket.org/api/swagger.json.svg)]()
 
 
-### Author  Dimitris Filippou
-
-
 
 | Software      | Version       |
 | ------------- | ------------- |
@@ -225,9 +222,9 @@ filter {
 
 Restart logstash
 
-`service logstas stop` 
+`service logstash stop` 
 
-`service logstas stop` 
+`service logstash stop` 
 
 Move back to filebeat server. Lets load the templates!
 
