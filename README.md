@@ -1,10 +1,13 @@
 # Elastic-Stack-5.0
 A complete documentation on how to install Elastic Stack on Ubuntu 16.04 Server ASAP ( As Simple As Possible )
 
+![alt text](https://img.shields.io/badge/tested-not%20yet-red.svg "Its true")
+
 ## Elastic Stack 5.0 Installation Guide 
 
 
 ![alt text](https://3.bp.blogspot.com/-3gz5Ot9YHmE/WGf8k9D6mzI/AAAAAAAAAMk/rO2hxFdTQhouAdowiU3om8ulGcRHzjqdwCLcB/s640/elastic-stack-5-0-diagram-thumb.jpg "Elastic Stack")
+[![Swagger Validator](https://img.shields.io/swagger/valid/2.0/https/bitbucket.org/api/swagger.json.svg)]()
 
 
 ### Author  Dimitris Filippou
