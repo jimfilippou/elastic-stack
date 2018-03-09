@@ -8,11 +8,6 @@
 
 
 
-
-
-
-![alt text](https://img.shields.io/badge/swagger-100%25-green.svg "Its true")
-
 <br>
 
 </div>
